@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 const Contenedor = styled.div`
     border: solid 2px red;
+    background: #fff;
     width: 90%;
-    max-width: 70rem;
+    max-width: 60rem;
     height: 90vh;
     max-height: 50rem;
     overflow-y: auto;

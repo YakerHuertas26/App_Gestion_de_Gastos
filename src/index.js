@@ -12,6 +12,8 @@ import ListaDeGastos from './Components/ListaDeGastos';
 import RegistroDeUsuarios from './Components/RegistroUsuario';
 import {Helmet} from "react-helmet";
 import favicon from './img/logo.png';
+import Fondo from './Elements/Fondo';
+
 
 // Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900
 WebFont.load({
@@ -27,20 +29,21 @@ root.render(
       <link rel="shortcut icon" href={favicon} type="image/x-icon" />
       <title>APP GESTION GASTOS</title>
     </Helmet>
-  <React.StrictMode>
-    <BrowserRouter>
-      <Contenedor>
-        <Routes>
-          <Route path='/Iniciar-sesion' element={<IniciarSesion/>}/>
-          <Route path='/Crear-cuenta' element={<RegistroDeUsuarios/>}/>
-          <Route path='/Categoria' element={<GastosPorCategoria/>}/>
-          <Route path='/Lista-de-gastos' element={<ListaDeGastos/>}/>
-          <Route path='/Editar-gasto/:id' element={<EditarGastos/>}/>
-          <Route path='/' element={<App/>}/>
-        </Routes>
-      </Contenedor>
-    </BrowserRouter>
-  </React.StrictMode>
+    <React.StrictMode>
+      <BrowserRouter>
+        <Contenedor>
+          <Routes>
+            <Route path='/Iniciar-sesion' element={<IniciarSesion/>}/>
+            <Route path='/Crear-cuenta' element={<RegistroDeUsuarios/>}/>
+            <Route path='/Categoria' element={<GastosPorCategoria/>}/>
+            <Route path='/Lista-de-gastos' element={<ListaDeGastos/>}/>
+            <Route path='/Editar-gasto/:id' element={<EditarGastos/>}/>
+            <Route path='/' element={<App/>}/>
+          </Routes>
+        </Contenedor>
+      </BrowserRouter>
+      <Fondo/>
+    </React.StrictMode>
   </>
 );
 

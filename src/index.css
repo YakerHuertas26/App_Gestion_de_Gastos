@@ -15,6 +15,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to left, #e6f6e7, #fff,#e6f6e7);
 }
 
 #root {
