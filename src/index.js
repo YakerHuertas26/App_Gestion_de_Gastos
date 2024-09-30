@@ -10,7 +10,8 @@ import GastosPorCategoria from './Components/GastosPorCategoria';
 import IniciarSesion from './Components/InicioSesion';
 import ListaDeGastos from './Components/ListaDeGastos';
 import RegistroDeUsuarios from './Components/RegistroUsuario';
-
+import {Helmet} from "react-helmet";
+import favicon from './img/logo.png';
 
 // Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900
 WebFont.load({
@@ -21,6 +22,11 @@ WebFont.load({
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <>
+    <Helmet>
+      <link rel="shortcut icon" href={favicon} type="image/x-icon" />
+      <title>APP GESTION GASTOS</title>
+    </Helmet>
   <React.StrictMode>
     <BrowserRouter>
       <Contenedor>
@@ -35,5 +41,6 @@ root.render(
       </Contenedor>
     </BrowserRouter>
   </React.StrictMode>
+  </>
 );
 
